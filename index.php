@@ -74,7 +74,7 @@ $conexion->close();
     </main>
 
     <footer>
-        Tecnológico de Milpa Alta II - Sistema de Monitoreo Remoto con ESP32
+        Tecnológico de Milpa Alta II - Sistema de Monitoreo Remoto con ESP32 - Yael Montaño
     </footer>
     
     <script>
