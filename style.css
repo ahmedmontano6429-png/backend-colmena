@@ -1,0 +1,67 @@
+:root {
+    --fondo-principal: #0b1120;
+    --fondo-tarjeta: #1e293b;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #94a3b8;
+    --color-rojo: #ef4444;
+    --color-azul: #3b82f6;
+    --color-naranja: #f59e0b;
+    --borde-tarjeta: #334155;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    font-family: 'Inter', sans-serif;
+    padding: 2vh 5vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 30px; padding-bottom: 20px;
+    border-bottom: 1px solid var(--borde-tarjeta);
+}
+
+.titulo-contenedor h1 { font-size: 28px; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
+.titulo-contenedor p { color: var(--texto-secundario); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;}
+.logo-tec { height: 70px; filter: drop-shadow(0 0 8px rgba(255,255,255,0.1)); }
+
+.cuadricula { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 25px; flex-grow: 1; }
+
+.tarjeta {
+    background-color: var(--fondo-tarjeta);
+    border-radius: 16px; padding: 25px;
+    border: 1px solid var(--borde-tarjeta);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    display: flex; flex-direction: column;
+}
+
+.tarjeta h2 { font-size: 13px; color: var(--texto-secundario); margin-bottom: 20px; text-align: center; letter-spacing: 1.5px; font-weight: 600; }
+.tarjeta h2.destacado { color: var(--color-naranja); font-size: 15px; }
+.grafica-contenedor { flex-grow: 1; display: flex; align-items: center; justify-content: center; position: relative; width: 100%; height: 200px; }
+
+/* Indicador central de peso */
+.indicador-peso { position: relative; width: 90%; height: 250px; margin: 0 auto 20px auto; }
+.valor-central { position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.valor-central .numero { font-size: 50px; font-weight: 700; color: #fff; line-height: 1; }
+.valor-central .unidad { font-size: 16px; color: var(--texto-secundario); display: block; margin-top: 5px; }
+
+/* Cajas de temperatura y humedad al centro */
+.metricas-rapidas { display: flex; justify-content: space-around; background: rgba(0,0,0,0.25); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.05); }
+.metrica { display: flex; flex-direction: column; align-items: center; }
+.metrica .etiqueta { font-size: 11px; color: var(--texto-secundario); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;}
+.metrica .valor { font-size: 22px; font-weight: 700; }
+.valor.rojo { color: var(--color-rojo); }
+.valor.azul { color: var(--color-azul); }
+
+footer { text-align: center; margin-top: 35px; padding: 20px 0; color: var(--borde-tarjeta); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+@media (max-width: 900px) {
+    .cuadricula { grid-template-columns: 1fr; }
+    .cabecera { flex-direction: column; text-align: center; gap: 15px; }
+}
