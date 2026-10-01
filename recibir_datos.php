@@ -1,9 +1,9 @@
 <?php
-// Credenciales de tu base de datos en Clever Cloud
-$servername = "b6xibbccoplxhxf6btoh-mysql.services.clever-cloud.com";
-$username = "utfweyhdg8uyflzi";
-$password = "2nMxJYnr25BAE9WuCw79"; // <-- Reemplaza esto con tu contraseña real
-$dbname = "b6xibbccoplxhxf6btoh";
+// Credenciales de tu base de datos en Alwaysdata
+$servername = "mysql-mumaa.alwaysdata.net";
+$username = "mumaa_yael";
+$password = "MUMA124"; 
+$dbname = "mumaa_colmena";
 
 // 1. Crear conexion
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -31,7 +31,7 @@ if(isset($_POST['peso']) && isset($_POST['temperatura']) && isset($_POST['humeda
 
 } else {
     // Si entras desde el navegador de tu computadora, veras este mensaje
-    echo "Servidor nube activo y conectado a Clever Cloud. Esperando el POST del ESP32...";
+    echo "Servidor nube activo y conectado a Alwaysdata. Esperando el POST del ESP32...";
 }
 
 $conn->close();
